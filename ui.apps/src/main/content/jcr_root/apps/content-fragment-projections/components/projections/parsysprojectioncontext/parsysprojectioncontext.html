@@ -1,0 +1,17 @@
+<div class="contentfragment" data-sly-use.context="com.avionos.aem.projections.contentfragments.api.components.projections.contexts.parsys.ParsysProjectionContext">
+    <div class="cq-dd-fragment cq-placeholder" data-emptytext="Paragraph System Projection Context">
+    </div>
+    <span data-sly-test="${!wcmmode.disabled}" class="cq-contentfragment-details"
+          data-fragment-title="${context.projectionContext.contentFragment.title}"
+          data-fragment-path="${context.contentFragmentPath}"
+          data-fragment-element="${context.projectionContext.contentFragment.element}"
+          data-fragment-variation="${context.projectionContext.contentFragment.variation}">
+        <span class="cq-contentfragment-associatedcontent" data-sly-list="${context.projectionContext.contentFragment.associatedContent}">
+            <span class="cq-contentfragment-associatedcontent-item" data-title="${item.title}" data-path="${item.path}"></span>
+        </span>
+    </span>
+    <div class="parsys-projection-context">
+        <span data-sly-test="${!wcmmode.disabled}">${context.contentFragmentPath}</span>
+        <div data-sly-resource="${'projection' @ resourceType = context.parsysType}"></div>
+    </div>
+</div>
