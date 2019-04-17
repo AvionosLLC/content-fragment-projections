@@ -34,14 +34,6 @@ public class DefaultContentFragmentProjectionContexts implements ContentFragment
                     .filter(contentFragmentProjectionContext -> contentFragmentProjectionContext.getContentFragment() != null)
                     .ifPresent(contentFragmentProjectionContext -> contexts.add(contentFragmentProjectionContext));
 
-            /*
-            Optional.ofNullable(currentResource.getValueMap().get(ProjectionContext.PROJECTED_CONTENT_FRAGMENT_PROPERTY, String.class))
-                    .map(projectedContentFragmentPath -> theCurrentResource.getResourceResolver().getResource(projectedContentFragmentPath))
-                    .map(projectedContentFragmentResource -> projectedContentFragmentResource.adaptTo(ContentFragmentProjectionContext.class))
-                    .filter(contentFragmentProjectionContext -> contentFragmentProjectionContext.getContentFragment() != null)
-                    .ifPresent(contentFragmentProjectionContext -> contexts.add(contentFragmentProjectionContext));
-                    */
-
             currentResource = currentResource.getParent();
         }
 

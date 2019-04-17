@@ -1,5 +1,6 @@
 package com.avionos.aem.projections.contentfragments.core.components.projections.abstractprojection;
 
+import com.avionos.aem.projections.contentfragments.api.components.projections.projectioncomponent.ProjectionComponent;
 import com.avionos.aem.projections.contentfragments.api.models.projections.ContentFragmentProjectionContext;
 import com.avionos.aem.projections.contentfragments.api.models.projections.ContentFragmentProjectionContexts;
 import com.citytechinc.cq.component.annotations.DialogField;
@@ -12,7 +13,7 @@ import org.apache.sling.models.annotations.injectorspecific.Self;
 import javax.inject.Inject;
 import java.util.Optional;
 
-public abstract class AbstractProjectionComponent {
+public abstract class AbstractProjectionComponent implements ProjectionComponent {
 
     public static final String CONTEXT_PROJECTED = "contextProjected";
 

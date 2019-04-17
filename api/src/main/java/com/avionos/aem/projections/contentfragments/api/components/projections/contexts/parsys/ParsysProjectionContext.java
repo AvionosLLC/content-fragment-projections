@@ -5,7 +5,7 @@ import com.avionos.aem.projections.contentfragments.api.components.projections.c
 public interface ParsysProjectionContext extends ProjectionContext {
 
     default String getParsysType() {
-        return "wcm/foundation/components/parsys";
+        return "wcm/foundation/components/responsivegrid";
     }
 
 }
